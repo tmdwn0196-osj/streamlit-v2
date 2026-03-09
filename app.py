@@ -22,14 +22,24 @@ home = st.Page("pages/home.py", title = "홈")
 sensors = st.Page("pages/sensors.py", title = "센서현황")
 # 3. 전력화면
 power = st.Page("pages/power.py", title = "전력현황")
+# 4. 분석페이지
+
+test = st.Page("pages/test11.py",title = "분석테스트")
 
 # 네비게이션 구성
 pg = st.navigation({
     "메인" : [home],
-    "분석" : [sensors, power]
+    "분석" : [sensors, power,test]
+
 })
 
 st.sidebar.write("같은 사이드 바 형태입니다.")
 
 # 선택된 페이지 실행
 pg.run()
+
+
+# ---------#
+# 페이지 추가하기
+# 온도 분석 페이지 만들어보기 -> 간단하게 제목과 안의 텍스트만
+# ---------# 
