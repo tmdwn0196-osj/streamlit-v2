@@ -1,0 +1,4 @@
+# package 이름
+streamlit
+pandas
+plotly
