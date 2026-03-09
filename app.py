@@ -11,3 +11,5 @@ st.header("스트림릿 배포 테스트중")
 st.write("스트림릿 배포해보기 - 오승주")
 
 #git add . <- ignore 제외 모든 파일
+
+st.write("추가하기")
