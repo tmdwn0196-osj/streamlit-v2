@@ -15,9 +15,11 @@ st.write("스트림릿 배포해보기 - 오승주")
 st.sidebar.header("필터 설정")
 
 user_temp = st.sidebar.slider(
-    "온도 범위 설정",
+    "123",
     min_value=10.0,
     max_value=40.0,
     value=(20.0, 30.0),
     step=0.5
 )
+
+
