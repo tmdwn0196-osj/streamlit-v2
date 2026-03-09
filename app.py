@@ -12,14 +12,24 @@ st.set_page_config(
 st.header("스트림릿 배포 테스트중")
 st.write("스트림릿 배포해보기 - 오승주")
 
-st.sidebar.header("필터 설정")
-
-user_temp = st.sidebar.slider(
-    "123",
-    min_value=10.0,
-    max_value=40.0,
-    value=(20.0, 30.0),
-    step=0.5
-)
 
 
+# 페이지 등록
+# st.page("파일경로",title = '메뉴이름, icon = "아이콘")
+# 1. 홈화면
+home = st.Page("pages/home.py", title = "홈")
+# 2. 센서화면
+sensors = st.Page("pages/sensors.py", title = "센서현황")
+# 3. 전력화면
+power = st.Page("pages/power.py", title = "전력현황")
+
+# 네비게이션 구성
+pg = st.navigation({
+    "메인" : [home],
+    "분석" : [sensors, power]
+})
+
+st.sidebar.write("같은 사이드 바 형태입니다.")
+
+# 선택된 페이지 실행
+pg.run()
